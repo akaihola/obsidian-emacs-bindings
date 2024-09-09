@@ -275,10 +275,10 @@ export class EmacsHandler {
 
     // this.commandKeyBinding maps key specs like "c-p" (for CTRL + P) to
     // command objects, for lookup key needs to include the modifier
-    if (modifier) key = modifier + key
+    if (modifier) key = modifier + text
 
     // Key combos like CTRL+X H build up the data.keyChain
-    if (data.keyChain) key = data.keyChain += ' ' + key
+    if (data.keyChain) key = data.keyChain += ' ' + text
 
     // Key combo prefixes get stored as "null" (String!) in this
     // this.commandKeyBinding. When encountered no command is invoked but we
