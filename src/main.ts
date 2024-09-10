@@ -217,7 +217,7 @@ export class EmacsHandler {
     const keyData = EmacsHandler.getKey(e)
     const result = this.findCommand(keyData)
 
-    // console.log('  keyData=', keyData, ' result=', result);
+    console.log('  keyData=', keyData, ' result=', result);
 
     if (/Up|Down/.test(keyData?.[0]) && completionStatus(this.view.state))
       return
@@ -279,6 +279,8 @@ export class EmacsHandler {
     }
 
     const mappedKey = this.getMappedKey(key, text)
+    console.log(key, text, 'maps to', mappedKey)
+
     // this.commandKeyBinding maps key specs like "c-p" (for CTRL + P) to
     // command objects, for lookup key needs to include the modifier
     if (modifier) key = modifier + mappedKey
