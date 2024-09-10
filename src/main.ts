@@ -567,7 +567,7 @@ export const emacsKeys: EmacsKeyBindings = {
 
   'M-;': commands.toggleComment,
 
-  'C-/|C-x u|S-C--|C-z': commands.undo,
+  'C-/|C-x u|S-C--|C-S-_|C-z': commands.undo,
   'S-C-/|S-C-x u|C--|S-C-z': commands.redo, // infinite undo?
   // vertical editing
   'C-x r': 'selectRectangularRegion',
